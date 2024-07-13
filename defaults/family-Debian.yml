@@ -1,0 +1,10 @@
+---
+
+brave_url: https://brave-browser-apt-release.s3.brave.com/
+
+brave_gpg_url: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+brave_gpg_file: /usr/share/keyrings/brave-browser-archive-keyring.gpg
+
+brave_packages:
+  - brave-browser

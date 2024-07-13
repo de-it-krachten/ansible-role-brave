@@ -1,40 +1,7 @@
 ---
 
-- name: RedHat family
-  when: ansible_os_family == 'RedHat'
-  block:
-
-    - name: Import RPM signing key
-      ansible.builtin.rpm_key:
-        key: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-        state: present
-
-    - name: Add YUM/DNF repository
-      ansible.builtin.yum_repository:
-        name: brave
-        description: Brave browser
-        baseurl: https://brave-browser-rpm-release.s3.brave.com/x86_64/
-        gpgcheck: yes
-        gpgcakey: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-
-
-- name: Debian family
-  when: ansible_os_family == 'Debian'
-  block:
-
-    - name: Download GPG key
-      ansible.builtin.get_url:
-        url: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-        dest: /usr/share/keyrings/brave-browser-archive-keyring.gpg
-        mode: "0644"
-
-    - name: Configure the APT repository (Debian family)
-      ansible.builtin.apt_repository:
-        repo: "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"
-        filename: brave-browser-release
-        state: present
-
-- name: Install component
-  ansible.builtin.package:
-    name: brave-browser
-    state: present
+- name: Load variables based on OS type
+  ansible.builtin.include_tasks: vars.yml
+    
+- name: Installation 
+  ansible.builtin.include_tasks: install.yml

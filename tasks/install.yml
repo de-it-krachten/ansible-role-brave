@@ -1,0 +1,39 @@
+---
+
+- name: RedHat family
+  when: ansible_os_family == 'RedHat'
+  block:
+
+    - name: Import RPM signing key
+      ansible.builtin.rpm_key:
+        key: "{{ brave_gpg_url }}"
+        state: present
+
+    - name: Add YUM/DNF repository
+      ansible.builtin.yum_repository:
+        name: brave
+        description: Brave browser
+        baseurl: "{{ brave_url }}"
+        gpgcheck: yes
+        gpgcakey: "{{ brave_gpg_url }}"
+
+- name: Debian family
+  when: ansible_os_family == 'Debian'
+  block:
+
+    - name: Download GPG key
+      ansible.builtin.get_url:
+        url: "{{ brave_gpg_url }}"
+        dest: "{{ brave_gpg_file }}"
+        mode: "0644"
+
+    - name: Configure the APT repository (Debian family)
+      ansible.builtin.apt_repository:
+        repo: "deb [signed-by={{ brave_gpg_file }} arch=amd64] {{ brave_url }} stable main"
+        filename: brave-browser-release
+        state: present
+
+- name: Install component
+  ansible.builtin.package:
+    name: "{{ brave_packages }}"
+    state: present
