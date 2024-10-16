@@ -1,0 +1,8 @@
+---
+
+brave_url: https://brave-browser-rpm-release.s3.brave.com/x86_64/
+
+brave_gpg_url: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
+brave_packages:
+  - brave-browser
