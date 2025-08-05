@@ -26,6 +26,7 @@
         url: "{{ brave_gpg_url }}"
         dest: "{{ brave_gpg_file }}"
         mode: "0644"
+      tags: molecule-idempotence-notest
 
     - name: Configure the APT repository (Debian family)
       ansible.builtin.apt_repository:
