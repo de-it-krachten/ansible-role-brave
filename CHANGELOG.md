@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-brave/compare/v1.2.0...v1.3.0) (2026-03-15)
+
+
+### Features
+
+* Added support for Fedora 43 ([cfa5c22](https://github.com/de-it-krachten/ansible-role-brave/commit/cfa5c227395199b78ec7f82cafefe1cfd4cf58b0))
+* Drop support for Fedora 41 ([381e0da](https://github.com/de-it-krachten/ansible-role-brave/commit/381e0da8a7aa63e59c07d81c41cf4d6b2ddf7681))
+* Drop support for SUSE Linux Enterprise 15 ([605d2ad](https://github.com/de-it-krachten/ansible-role-brave/commit/605d2ad8fe22da57ee65949bb6f6090ab3fd2c88))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-brave/compare/v1.1.0...v1.2.0) (2025-08-06)
 
 
