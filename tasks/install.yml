@@ -15,7 +15,7 @@
         description: Brave browser
         baseurl: "{{ brave_url }}"
         gpgcheck: yes
-        gpgcakey: "{{ brave_gpg_url }}"
+        gpgkey: "{{ brave_gpg_url }}"
 
 - name: Debian family
   when: ansible_facts.os_family == 'Debian'
