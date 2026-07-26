@@ -1,3 +1,19 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-brave/compare/v1.3.0...v1.4.0) (2026-07-26)
+
+
+### Bug Fixes
+
+* Refactor due to deprecatrion warnings ([d5959de](https://github.com/de-it-krachten/ansible-role-brave/commit/d5959dedce99b8a4ff51277a2396bb335b93b547))
+* Standarize vars.yml ([4379c6a](https://github.com/de-it-krachten/ansible-role-brave/commit/4379c6afc32c82bdaa213cb8d7b9997fd0915a6f))
+
+
+### Features
+
+* Add support for ansible-core 2.20+ ([49020a9](https://github.com/de-it-krachten/ansible-role-brave/commit/49020a9f28457a89b01c0567543aec0a0efb331b))
+* Added support for Fedora 44 ([a8a8a81](https://github.com/de-it-krachten/ansible-role-brave/commit/a8a8a81e5a0da57080cdbb61e3ce7299fabc536e))
+* Added support for Ubuntu 26.04 LTS ([a4c7d43](https://github.com/de-it-krachten/ansible-role-brave/commit/a4c7d43f77341a33ce05480a5504ba2f4acf4bac))
+* Drop support for Fedora 42 ([cbe6ce6](https://github.com/de-it-krachten/ansible-role-brave/commit/cbe6ce606f1ae365e7d99aac8d635716b0dcf43b))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-brave/compare/v1.2.0...v1.3.0) (2026-03-15)
 
 
