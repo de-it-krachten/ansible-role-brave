@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-brave/compare/v1.4.0...v1.5.0) (2026-10-13)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([13dfb18](https://github.com/de-it-krachten/ansible-role-brave/commit/13dfb1869b3543e5af2b729b5368c2a502ae2cfb))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-brave/compare/v1.3.0...v1.4.0) (2026-07-26)
 
 
